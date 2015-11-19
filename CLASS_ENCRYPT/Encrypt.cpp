@@ -14,9 +14,17 @@ Encrypt::Encrypt()
 void Encrypt::set_code_array()
 {
 	srand(time(0));
-	int a = rand() % 10;
+
+	int a = 0;
+	int b = 0;
+
+	do
+	{
+		a = rand() % 10;
+		b = rand() % 10;
+	} while ((a % 2) == 0);
+
 	cout << "a: " << a << endl;
-	int b = rand() % 10;
 	cout << "b: " << b << endl;
 
 	int x, y, m;
