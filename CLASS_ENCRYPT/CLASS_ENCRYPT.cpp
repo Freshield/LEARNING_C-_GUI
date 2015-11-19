@@ -16,7 +16,7 @@ int main()
 	cout << encrypt.get_code_array() << endl;
 
 	string d = "There is no spoon.";
-
+	 
 	cout << d << endl;
 
 	string r1 = encrypt.ToEncode(d);
