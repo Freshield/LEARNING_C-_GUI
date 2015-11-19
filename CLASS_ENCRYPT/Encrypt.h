@@ -1,10 +1,11 @@
-#inlcude <string>
+#include <string>
 
 using namespace std;
 
 class Encrypt
 {
 public:
+	Encrypt();
 	//getter and setter
 	void set_code_array();
 	string get_code_array();
@@ -13,5 +14,5 @@ public:
 	string ToDecode(string);
 
 private:
-	string code_array:
+	string code_array;
 };
