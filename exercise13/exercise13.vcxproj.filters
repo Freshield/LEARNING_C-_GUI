@@ -32,5 +32,11 @@
     <ClCompile Include="exercise13.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="class_demo4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegerDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

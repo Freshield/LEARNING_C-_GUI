@@ -1,5 +1,6 @@
-#inlcude "class_demo4.h"
 
+#include "stdafx.h"
+#include "class_demo4.h"
 DEMO::DEMO()
 {
 	a = 1;
