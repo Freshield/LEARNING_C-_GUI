@@ -2,6 +2,9 @@
 //
 
 #include "stdafx.h"
+#include "Encrypt.h"
+
+using namespace std;
 
 
 int main()
