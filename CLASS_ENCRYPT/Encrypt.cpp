@@ -6,9 +6,6 @@
 
 using namespace std;
 
-int DIFF = 97;
-int N = 26;
-
 Encrypt::Encrypt()
 {
 	set_code_array();
@@ -39,7 +36,7 @@ void Encrypt::set_code_array()
 		x = c;
 		y = x * a + b;
 		m = y % 26;
-		s += m + 97;
+		s += (char)m + DIFF;
 		c++;
 	}
 
@@ -61,11 +58,11 @@ string Encrypt::ToEncode(string s)
 
 	for (int i = 0; i < s.size(); i++)
 	{
-		if (s.at(i) >= DIFF && s.at(i) < (DIFF + N))
+		if (s.at(i) >= DIFF && s.at(i) < (DIFF + NUM))
 		{
 			c = s.at(i);
 
-			m = c - 97;
+			m = c - DIFF;
 
 			r += get_code_array().at(m);
 
@@ -84,9 +81,9 @@ string Encrypt::ToDecode(string s)
 
 	for (int i = 0; i < s.size(); i++)
 	{
-		if (s.at(i) >= DIFF && s.at(i) < (DIFF + N))
+		if (s.at(i) >= DIFF && s.at(i) < (DIFF + NUM))
 		{
-			for (int j = 0; j < N; j++)
+			for (int j = 0; j < NUM; j++)
 			{
 				if (s.at(i) == get_code_array().at(j))
 				{

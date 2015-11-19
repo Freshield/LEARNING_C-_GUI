@@ -1,5 +1,8 @@
 #include <string>
 
+#define DIFF  97
+#define NUM  26
+
 using namespace std;
 
 class Encrypt
