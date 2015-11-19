@@ -12,7 +12,7 @@ char b[26];
 
 int main()
 {
-	for (char i = 1; i <= 26; i++)
+	for (int i = 1; i <= 26; i++)
 	{
 		b[i] = 'a' - 1 + i;
 		cout << b[i] << endl;
