@@ -61,18 +61,18 @@ string Encrypt::ToEncode(string s)
 
 	for (int i = 0; i < s.size(); i++)
 	{
-		if (s.at(i) >= DIFF && s.at(i) < (DIFF + N))
+		if (s[i] >= DIFF && s[i] < (DIFF + N))
 		{
-			c = s.at(i);
+			c = s[i];
 
 			m = c - 97;
 
-			r += get_code_array().at(m);
+			r += get_code_array()[m];
 
 		}
 		else
 		{
-			r += s.at(i);
+			r += s[i];
 		}
 	}
 	return r;
@@ -84,11 +84,11 @@ string Encrypt::ToDecode(string s)
 
 	for (int i = 0; i < s.size(); i++)
 	{
-		if (s.at(i) >= DIFF && s.at(i) < (DIFF + N))
+		if (s[i] >= DIFF && s[i] < (DIFF + N))
 		{
 			for (int j = 0; j < N; j++)
 			{
-				if (s.at(i) == get_code_array().at(j))
+				if (s[i] == get_code_array()[j])
 				{
 					r += (char)j + DIFF;
 					break;
@@ -98,7 +98,7 @@ string Encrypt::ToDecode(string s)
 		}
 		else
 		{
-			r += s.at(i);
+			r += s[i];
 		}
 	}
 	return r;

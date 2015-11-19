@@ -17,7 +17,7 @@ int main()
 
 	string d = "There is no spoon.";
 	 
-	cout << d << endl;
+	cout << d << endl; 
 
 	string r1 = encrypt.ToEncode(d);
 
