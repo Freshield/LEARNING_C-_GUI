@@ -78,7 +78,28 @@ string Encrypt::ToEncode(string s)
 	return r;
 }
 
-string Encrypt::ToDecode(string i)
+string Encrypt::ToDecode(string s)
 {
-	return i;
+	string r;
+
+	for (int i = 0; i < s.size(); i++)
+	{
+		if (s.at(i) >= DIFF && s.at(i) < (DIFF + N))
+		{
+			for (int j = 0; j < N; j++)
+			{
+				if (s.at(i) == get_code_array().at(j))
+				{
+					r += (char)j + DIFF;
+					break;
+				}
+			}
+
+		}
+		else
+		{
+			r += s.at(i);
+		}
+	}
+	return r;
 }

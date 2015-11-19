@@ -23,6 +23,10 @@ int main()
 
 	cout << r1 << endl;
 
+	string r2 = encrypt.ToDecode(r1);
+
+	cout << r2 << endl;
+
     return 0;
 }
 
