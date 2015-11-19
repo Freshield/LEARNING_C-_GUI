@@ -1,4 +1,6 @@
 #include "stdafx.h"
+#include <cstdlib>
+#include <ctime>
 #include "Encrypt.h"
 
 Encrypt::Encrypt()
@@ -8,8 +10,9 @@ Encrypt::Encrypt()
 
 void Encrypt::set_code_array()
 {
-	int a = 3;
-	int b = 5;
+	srand(time(0));
+	int a = rand() % 10;
+	int b = rand() % 10;
 
 	int x, y, m;
 	char c = 'a';
