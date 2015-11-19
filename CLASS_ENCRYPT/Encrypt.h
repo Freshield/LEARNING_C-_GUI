@@ -1,4 +1,4 @@
-#inlcude <string>
+#include <string>
 
 using namespace std;
 
@@ -13,5 +13,5 @@ public:
 	string ToDecode(string);
 
 private:
-	string code_array:
+	string code_array;
 };
