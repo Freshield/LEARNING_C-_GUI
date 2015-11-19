@@ -1,7 +1,10 @@
 #include "stdafx.h"
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
 #include "Encrypt.h"
+
+using namespace std;
 
 Encrypt::Encrypt()
 {
@@ -12,7 +15,9 @@ void Encrypt::set_code_array()
 {
 	srand(time(0));
 	int a = rand() % 10;
+	cout << "a: " << a << endl;
 	int b = rand() % 10;
+	cout << "b: " << b << endl;
 
 	int x, y, m;
 	char c = 'a';
