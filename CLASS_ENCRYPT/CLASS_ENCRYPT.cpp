@@ -11,6 +11,7 @@ using namespace std;
 
 int a[10] = { 0,1,2,3,4,5,6,7,8,9 };
 char b[26];
+int time = 1;
 
 	int find_a(string num, string answer);
 	int find_b(string num, string answer);
@@ -45,6 +46,7 @@ char b[26];
 			if (A == 4)
 			{
 				cout << "ANSWER: " << answer << endl;
+				cout << "time: " << time << endl;
 
 				break;
 			}
@@ -53,6 +55,7 @@ char b[26];
 				A = 0;
 				B = 0;
 				cout << "REPEAT" << endl;
+				time++;
 
 			}
 		}
