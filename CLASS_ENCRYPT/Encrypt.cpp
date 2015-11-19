@@ -56,23 +56,24 @@ string Encrypt::ToEncode(string s)
 	char c;
 
 	string r;
+	string temp = get_code_array();
 
 	int m;
 
 	for (int i = 0; i < s.size(); i++)
 	{
-		if (s.at(i) >= DIFF && s.at(i) < (DIFF + N))
+		if (s[i] >= DIFF && s[i] < (DIFF + N))
 		{
-			c = s.at(i);
+			c = s[i];
 
 			m = c - 97;
 
-			r += get_code_array().at(m);
+			r += temp[m];
 
 		}
 		else
 		{
-			r += s.at(i);
+			r += s[i];
 		}
 	}
 	return r;

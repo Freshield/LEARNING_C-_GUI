@@ -11,7 +11,7 @@ using namespace std;
 
 int main()   
 {
-	Encrypt encrypt;
+	Encrypt encrypt; 
 
 	cout << encrypt.get_code_array() << endl;
 
