@@ -7,75 +7,141 @@
 
 using namespace std;  
 
+
+
 int a[10] = { 0,1,2,3,4,5,6,7,8,9 };
 char b[26];
 
-int main()
-{
-	for (int i = 1; i <= 26; i++)
-	{
-		b[i] = 'a' - 1 + i;
-		cout << b[i] << endl;
+	int find_a(string num, string answer);
+	int find_b(string num, string answer);
 
-	}
-	int A = 0;
-	int B = 0;
-	int num;
-	int answer = 1234;
-	cout << "input four number please" << endl;
-	cin >> num;
-	int thu = num / 1000;
-	int hun = num % 1000 /100;
-	int ty = num % 100 / 10;
-	int nu = num % 10;
 
-	cout << thu << endl;
-	cout << hun << endl;
-	cout << ty << endl;
-	cout << nu << endl;
+	int main()
+	{
+		for (int i = 1; i <= 26; i++)
+		{
+			b[i] = 'a' - 1 + i;
+			cout << b[i] << endl;
 
-	if (thu == 1)
-	{
-		A++;
-	}
-	else if (hun == 1 || ty == 1 || nu == 1)
-	{
-		B++;
-	}
+		}
+		int A = 0;
+		int B = 0;
+		string num;
+		string answer = "1234";
 
-	if (hun == 2)
-	{
-		A++;
-	}
-	else if (thu == 2 || ty == 2 || nu == 2)
-	{
-		B++;
-	}
 
-	if (ty == 3)
-	{
-		A++;
-	}
-	else if (hun == 3 || thu == 3 || nu == 3)
-	{
-		B++;
+		while (1)
+		{
+
+			cout << "input four number please" << endl;
+			cin >> num;
+
+			A = find_a(num, answer);
+			B = find_b(num, answer);
+
+			cout << "A: " << A << endl;
+			cout << "B: " << B << endl;
+
+			if (A == 4)
+			{
+				cout << "ANSWER: " << answer << endl;
+
+				break;
+			}
+			else
+			{
+				A = 0;
+				B = 0;
+				cout << "REPEAT" << endl;
+
+			}
+		}
+		return 0;
 	}
 
-	if (nu == 4)
+
+	int find_a(string num, string answer)
 	{
-		A++;
+		int A = 0;
+		int B = 0;
+		if (num[0] == answer[0])
+		{
+			A++;
+		}
+		else if (num[1] == answer[0] || num[2] == answer[0] || num[3] == answer[0])
+		{
+			B++;
+		}
+
+		if (num[1] == answer[1])
+		{
+			A++;
+		}
+		else if (num[0] == answer[1] || num[2] == answer[1] || num[3] == answer[1])
+		{
+			B++;
+		}
+
+		if (num[2] == answer[2])
+		{
+			A++;
+		}
+		else if (num[1] == answer[2] || num[0] == answer[2] || num[3] == answer[2])
+		{
+			B++;
+		}
+
+		if (num[3] == answer[3])
+		{
+			A++;
+		}
+		else if (num[1] == answer[3] || num[2] == answer[3] || num[0] == answer[3])
+		{
+			B++;
+		}
+
+    return A;
 	}
-	else if (hun == 4 || ty == 4 || thu == 4)
+
+	int find_b(string num, string answer)
 	{
-		B++;
+		int A = 0;
+		int B = 0;
+		if (num[0] == answer[0])
+		{
+			A++;
+		}
+		else if (num[1] == answer[0] || num[2] == answer[0] || num[3] == answer[0])
+		{
+			B++;
+		}
+
+		if (num[1] == answer[1])
+		{
+			A++;
+		}
+		else if (num[0] == answer[1] || num[2] == answer[1] || num[3] == answer[1])
+		{
+			B++;
+		}
+
+		if (num[2] == answer[2])
+		{
+			A++;
+		}
+		else if (num[1] == answer[2] || num[0] == answer[2] || num[3] == answer[2])
+		{
+			B++;
+		}
+
+		if (num[3] == answer[3])
+		{
+			A++;
+		}
+		else if (num[1] == answer[3] || num[2] == answer[3] || num[0] == answer[3])
+		{
+			B++;
+		}
+
+		return B;
 	}
-
-	cout << "A: " << A << endl;
-	cout << "B: " << B << endl;
-
-	cout << "ANSWER: " << answer << endl;
-
-
-    return 0;
-}
-
