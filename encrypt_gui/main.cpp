@@ -1,6 +1,8 @@
 #include "encryptwindow.h"
 #include <QApplication>
 
+char a = 1;
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);

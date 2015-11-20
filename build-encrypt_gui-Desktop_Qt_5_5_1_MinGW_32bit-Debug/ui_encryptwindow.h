@@ -63,12 +63,15 @@ public:
         lineEdit_INPUT = new QLineEdit(centralWidget);
         lineEdit_INPUT->setObjectName(QStringLiteral("lineEdit_INPUT"));
         lineEdit_INPUT->setGeometry(QRect(180, 50, 701, 31));
-        lineEdit_INPUT->setFont(font);
+        QFont font1;
+        font1.setFamily(QStringLiteral("Consolas"));
+        font1.setPointSize(10);
+        lineEdit_INPUT->setFont(font1);
         lineEdit_OUTPUT = new QLineEdit(centralWidget);
         lineEdit_OUTPUT->setObjectName(QStringLiteral("lineEdit_OUTPUT"));
         lineEdit_OUTPUT->setEnabled(false);
         lineEdit_OUTPUT->setGeometry(QRect(180, 90, 701, 31));
-        lineEdit_OUTPUT->setFont(font);
+        lineEdit_OUTPUT->setFont(font1);
         label_DISPLAY = new QLabel(centralWidget);
         label_DISPLAY->setObjectName(QStringLiteral("label_DISPLAY"));
         label_DISPLAY->setGeometry(QRect(90, 240, 911, 41));
