@@ -1,7 +1,7 @@
 #include "encryptwindow.h"
 #include <QApplication>
 
-char a = 1;
+char a = 2;
 
 int main(int argc, char *argv[])
 {
