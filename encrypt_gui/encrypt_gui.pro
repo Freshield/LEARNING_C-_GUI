@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        encryptwindow.cpp
+        encryptwindow.cpp \
+    encrypt.cpp
 
-HEADERS  += encryptwindow.h
+HEADERS  += encryptwindow.h \
+    encrypt.h
 
 FORMS    += encryptwindow.ui
