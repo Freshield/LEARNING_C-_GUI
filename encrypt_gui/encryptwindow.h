@@ -33,6 +33,8 @@ private slots:
 
     void on_pushButton_COPY_clicked();
 
+    void on_lineEdit_INPUT_textChanged(const QString &arg1);
+
 private:
     Ui::EncryptWindow *ui;
     Encrypt *e;

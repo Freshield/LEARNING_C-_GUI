@@ -153,3 +153,8 @@ void EncryptWindow::on_pushButton_COPY_clicked()
     clipboard->setText(output_text);
     ui->label_DISPLAY->setText("RESULT IS COPIED TO CLIPBOARD");
 }
+
+void EncryptWindow::on_lineEdit_INPUT_textChanged(const QString &arg1)
+{
+    ui->label_DISPLAY->setText("YOUR INPUT IS \"" + arg1 + "\".");
+}

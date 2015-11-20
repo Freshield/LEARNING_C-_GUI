@@ -66,6 +66,7 @@ public:
         lineEdit_INPUT->setFont(font);
         lineEdit_OUTPUT = new QLineEdit(centralWidget);
         lineEdit_OUTPUT->setObjectName(QStringLiteral("lineEdit_OUTPUT"));
+        lineEdit_OUTPUT->setEnabled(false);
         lineEdit_OUTPUT->setGeometry(QRect(180, 90, 701, 31));
         lineEdit_OUTPUT->setFont(font);
         label_DISPLAY = new QLabel(centralWidget);
